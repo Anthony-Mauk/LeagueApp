@@ -92,6 +92,10 @@
     <Compile Include="Migrations\202011171740518_BeforeTeam.Designer.cs">
       <DependentUpon>202011171740518_BeforeTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011171759535_AfterNukeTeam.cs" />
+    <Compile Include="Migrations\202011171759535_AfterNukeTeam.Designer.cs">
+      <DependentUpon>202011171759535_AfterNukeTeam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011171740518_BeforeTeam.resx">
       <DependentUpon>202011171740518_BeforeTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011171759535_AfterNukeTeam.resx">
+      <DependentUpon>202011171759535_AfterNukeTeam.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

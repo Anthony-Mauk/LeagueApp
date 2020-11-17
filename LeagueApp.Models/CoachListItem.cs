@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeagueApp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,5 +16,7 @@ namespace LeagueApp.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
         public string Email { get; set; }
+        //public int TeamId { get; set; }
+        //public virtual Team Teams { get; set; }
     }
 }

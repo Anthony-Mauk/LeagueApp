@@ -24,3 +24,4 @@ C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrati
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeFixPlayerEdit.resources
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeFixCoach.resources
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeTeam.resources
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.AfterNukeTeam.resources
