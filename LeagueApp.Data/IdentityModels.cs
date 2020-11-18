@@ -46,6 +46,18 @@ namespace LeagueApp.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            // add code so you can delete a team or coach, but need front end to say cannot delete with ..
+            modelBuilder.Entity<Player>()
+                .HasOptional<Team>(s => s.Team)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Coach>()
+                .HasOptional<Team>(s => s.Team)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+            // end
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

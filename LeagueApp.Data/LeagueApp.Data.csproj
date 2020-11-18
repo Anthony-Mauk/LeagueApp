@@ -68,6 +68,14 @@
     <Compile Include="Migrations\202011181831016_add-migration 1118201330.Designer.cs">
       <DependentUpon>202011181831016_add-migration 1118201330.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011181914004_1118201413.cs" />
+    <Compile Include="Migrations\202011181914004_1118201413.Designer.cs">
+      <DependentUpon>202011181914004_1118201413.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011181937364_1118201437.cs" />
+    <Compile Include="Migrations\202011181937364_1118201437.Designer.cs">
+      <DependentUpon>202011181937364_1118201437.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011181831016_add-migration 1118201330.resx">
       <DependentUpon>202011181831016_add-migration 1118201330.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011181914004_1118201413.resx">
+      <DependentUpon>202011181914004_1118201413.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011181937364_1118201437.resx">
+      <DependentUpon>202011181937364_1118201437.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

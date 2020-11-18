@@ -14,9 +14,10 @@
         <p>
             Start here by entering the players who've signed up for your league
         </p>
-        <p><a class="btn btn-default" href="~/Views/Player/Index.cshtml">Learn more &raquo;</a></p>
-        <p><a class="btn btn-default" asp-page="~/Views/Player/Index">Learn more &raquo;</a></p>
-        <p><a class="btn btn-default" asp-page="../Views/Player/Index">Learn more &raquo;</a></p>
+        @*<p><a class="btn btn-default" href="~/Views/Player/Index.cshtml">Learn more &raquo;</a></p>*@
+        <p><a class="btn btn-default" @Html.ActionLink("Player", "Index", "Player")</a></p>
+        <p>@Html.ActionLink("Player", "Index", "Player") </p>
+
 
     </div>
     <div class="col-md-4">

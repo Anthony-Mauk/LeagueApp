@@ -19,7 +19,6 @@ namespace LeagueApp.Data
 
         public virtual ICollection<Player> Players { get; set; } = new List<Player>(); // one table holding the many entities
         
-
         public virtual ICollection<Coach> Coaches { get; set; } = new List<Coach>(); // one table holding the many entities
     }
 }
