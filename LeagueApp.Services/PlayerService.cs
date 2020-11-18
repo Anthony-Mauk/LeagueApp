@@ -94,6 +94,7 @@ namespace LeagueApp.Services
                 entity.LastName = model.LastName;
                 entity.ParentEmail = model.ParentEmail;
                 entity.TeamId = model.TeamId;
+                entity.Team = model.Team;
 
 
                 return ctx.SaveChanges() == 1;

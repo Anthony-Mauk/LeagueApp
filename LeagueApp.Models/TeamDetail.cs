@@ -10,5 +10,6 @@ namespace LeagueApp.Models
     {
         public int TeamId { get; set; }
         public string Name { get; set; }
+
     }
 }

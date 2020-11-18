@@ -24,7 +24,8 @@ namespace LeagueApp.Services
                     OwnerId = _userId,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Email = model.Email
+                    Email = model.Email,
+                    TeamId = model.TeamId
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -48,7 +49,8 @@ namespace LeagueApp.Services
                                     CoachId = e.CoachId,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
-                                    Email = e.Email
+                                    Email = e.Email,
+                                    TeamId = e.TeamId
                                 }
                         );
 
@@ -69,7 +71,8 @@ namespace LeagueApp.Services
                     CoachId = entity.CoachId,
                     FirstName = entity.FirstName,
                     LastName = entity.LastName,
-                    Email = entity.Email
+                    Email = entity.Email,
+                    TeamId = entity.TeamId
                 };
             }
         }
@@ -86,6 +89,7 @@ namespace LeagueApp.Services
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.Email = model.Email;
+                entity.TeamId = model.TeamId;
 
                 return ctx.SaveChanges() == 1;
             }

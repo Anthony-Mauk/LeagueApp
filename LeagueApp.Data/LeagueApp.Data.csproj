@@ -56,6 +56,19 @@
   <ItemGroup>
     <Compile Include="Coach.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011181531353_InitialCreate.cs" />
+    <Compile Include="Migrations\202011181531353_InitialCreate.Designer.cs">
+      <DependentUpon>202011181531353_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011181823142_AfterAllCRUDNeedFixes.cs" />
+    <Compile Include="Migrations\202011181823142_AfterAllCRUDNeedFixes.Designer.cs">
+      <DependentUpon>202011181823142_AfterAllCRUDNeedFixes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011181831016_add-migration 1118201330.cs" />
+    <Compile Include="Migrations\202011181831016_add-migration 1118201330.Designer.cs">
+      <DependentUpon>202011181831016_add-migration 1118201330.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team.cs" />
@@ -63,6 +76,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011181531353_InitialCreate.resx">
+      <DependentUpon>202011181531353_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011181823142_AfterAllCRUDNeedFixes.resx">
+      <DependentUpon>202011181823142_AfterAllCRUDNeedFixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011181831016_add-migration 1118201330.resx">
+      <DependentUpon>202011181831016_add-migration 1118201330.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

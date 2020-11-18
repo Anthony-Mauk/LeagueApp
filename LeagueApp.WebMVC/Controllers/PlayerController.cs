@@ -1,4 +1,5 @@
-﻿using LeagueApp.Models;
+﻿using LeagueApp.Data;
+using LeagueApp.Models;
 using LeagueApp.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -11,6 +12,7 @@ namespace LeagueApp.WebMVC.Controllers
 {
     public class PlayerController : Controller
     {
+        private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Player
         public ActionResult Index()
         {
@@ -25,6 +27,7 @@ namespace LeagueApp.WebMVC.Controllers
         public ActionResult Create()
         {
             //viewbag.teamid = ?? General Store
+            ViewBag.TeamId = new SelectList(_db.Teams.ToList(), "TeamId", "Name");
             return View();
         }
 
@@ -59,6 +62,9 @@ namespace LeagueApp.WebMVC.Controllers
 
         public ActionResult Edit(int id)
         {
+
+            ViewBag.TeamId = new SelectList(_db.Teams.ToList(), "TeamId", "Name");
+
             var service = CreatePlayerService();
             var detail = service.GetPlayerById(id);
             var model =

@@ -1,4 +1,5 @@
-﻿using LeagueApp.Models;
+﻿using LeagueApp.Data;
+using LeagueApp.Models;
 using LeagueApp.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -12,6 +13,7 @@ namespace LeagueApp.WebMVC.Controllers
     [Authorize]
     public class CoachController : Controller
     {
+        private ApplicationDbContext _db = new ApplicationDbContext();
         // GET: Coach
         public ActionResult Index()
         {
@@ -31,6 +33,7 @@ namespace LeagueApp.WebMVC.Controllers
         //Get
         public ActionResult Create()
         {
+            ViewBag.TeamId = new SelectList(_db.Teams.ToList(), "TeamId", "Name");
             return View();
         }
 
@@ -64,6 +67,9 @@ namespace LeagueApp.WebMVC.Controllers
 
         public ActionResult Edit(int id) 
         {
+
+            ViewBag.TeamId = new SelectList(_db.Teams.ToList(), "TeamId", "Name");
+
             var service = CreateCoachService();
             var detail = service.GetCoachById(id);
             var model =
@@ -72,7 +78,8 @@ namespace LeagueApp.WebMVC.Controllers
                     CoachId = detail.CoachId,
                     FirstName = detail.FirstName,
                     LastName = detail.LastName,
-                    Email = detail.Email
+                    Email = detail.Email,
+                    TeamId = detail.TeamId
                 };
             return View(model);
         }
