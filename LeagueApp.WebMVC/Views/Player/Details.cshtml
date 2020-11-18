@@ -42,10 +42,17 @@
             @Html.DisplayFor(model => model.ParentEmail)
         </dd>
 
-      
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamId)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerId}) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlayerId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

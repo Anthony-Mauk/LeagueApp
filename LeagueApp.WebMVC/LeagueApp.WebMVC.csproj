@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CoachController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -237,11 +238,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Player\Create.cshtml" />
-    <Content Include="Views\Player\Details.cshtml" />
-    <Content Include="Views\Player\Delete.cshtml" />
-    <Content Include="Views\Player\Index.cshtml" />
-    <Content Include="Views\Player\Edit.cshtml" />
     <Content Include="Views\Coach\Index.cshtml" />
     <Content Include="Views\Coach\Create.cshtml" />
     <Content Include="Views\Coach\Details.cshtml" />
@@ -252,6 +248,11 @@
     <Content Include="Views\Team\Details.cshtml" />
     <Content Include="Views\Team\Edit.cshtml" />
     <Content Include="Views\Team\Delete.cshtml" />
+    <Content Include="Views\Player\Index.cshtml" />
+    <Content Include="Views\Player\Create.cshtml" />
+    <Content Include="Views\Player\Details.cshtml" />
+    <Content Include="Views\Player\Edit.cshtml" />
+    <Content Include="Views\Player\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

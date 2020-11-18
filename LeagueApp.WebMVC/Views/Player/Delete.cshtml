@@ -11,9 +11,14 @@
     <h4>PlayerDetail</h4>
     <hr />
     <dl class="dl-horizontal">
-
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
 
         <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -38,6 +43,13 @@
             @Html.DisplayFor(model => model.ParentEmail)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamId)
+        </dd>
 
     </dl>
 

@@ -11,8 +11,6 @@ namespace LeagueApp.Data
     public class Coach
     {
         [Key]
-
-       
         public int CoachId { get; set; } 
         
         public Guid OwnerId { get; set; }

@@ -11,6 +11,7 @@ namespace LeagueApp.Services
     public class PlayerService
     {
         private readonly Guid _userId;
+
         public PlayerService(Guid userId)
         {
             _userId = userId;
@@ -25,36 +26,41 @@ namespace LeagueApp.Services
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     ParentEmail = model.ParentEmail,
-
+                    TeamId = model.TeamId,
+                    Team = model.Team
                 };
+
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Players.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
+
         public IEnumerable<PlayerListItem> GetPlayers()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .Players
-                    .Where(e => e.OwnerId == _userId)
-                    .Select(
-                        e =>
-                        new PlayerListItem
-                        {
-                            PlayerId = e.PlayerId,
-                            FirstName = e.FirstName,
-                            LastName = e.LastName,
-                            ParentEmail = e.ParentEmail,
+                        .Players
+                        .Where(e => e.OwnerId == _userId)
+                        .Select(
+                            e =>
+                                new PlayerListItem
+                                {
+                                    PlayerId = e.PlayerId,
+                                    FirstName = e.FirstName,
+                                    LastName = e.LastName,
+                                    ParentEmail = e.ParentEmail,
+                                    TeamId = e.TeamId
+                                }
+                        );
 
-                        }
-                    );
                 return query.ToArray();
             }
         }
+
         public PlayerDetail GetPlayerById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -70,7 +76,8 @@ namespace LeagueApp.Services
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
                         ParentEmail = entity.ParentEmail,
-
+                        TeamId = entity.TeamId,
+                        Team = entity.Team
                     };
             }
         }
@@ -86,6 +93,7 @@ namespace LeagueApp.Services
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
                 entity.ParentEmail = model.ParentEmail;
+                entity.TeamId = model.TeamId;
 
 
                 return ctx.SaveChanges() == 1;
@@ -100,6 +108,7 @@ namespace LeagueApp.Services
                     ctx
                         .Players
                         .Single(e => e.PlayerId == playerId && e.OwnerId == _userId);
+
                 ctx.Players.Remove(entity);
 
                 return ctx.SaveChanges() == 1;

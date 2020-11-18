@@ -17,17 +17,9 @@ namespace LeagueApp.Data
         [Display(Name="Team Name")]
         public string Name { get; set; }
 
-       
-        //public int? PlayerId { get; set; } 
-        //[ForeignKey(nameof(PlayerId))]
-        //[ForeignKey("PlayerId")]
         public virtual ICollection<Player> Players { get; set; } = new List<Player>(); // one table holding the many entities
         
-        
-        //public int? CoachId { get; set; }
-        //[ForeignKey("CoachId")]
-        //[ForeignKey(nameof(CoachId))]
-        //public virtual Coach Coach { get; set; } one to one
+
         public virtual ICollection<Coach> Coaches { get; set; } = new List<Coach>(); // one table holding the many entities
     }
 }
