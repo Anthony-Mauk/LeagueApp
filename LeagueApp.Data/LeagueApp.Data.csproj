@@ -56,47 +56,6 @@
   <ItemGroup>
     <Compile Include="Coach.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202011161509385_InitialCreate.cs" />
-    <Compile Include="Migrations\202011161509385_InitialCreate.Designer.cs">
-      <DependentUpon>202011161509385_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011161737557_Add-MIgration InitialMIgration.cs" />
-    <Compile Include="Migrations\202011161737557_Add-MIgration InitialMIgration.Designer.cs">
-      <DependentUpon>202011161737557_Add-MIgration InitialMIgration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011161800454_add-migration afterplayer.cs" />
-    <Compile Include="Migrations\202011161800454_add-migration afterplayer.Designer.cs">
-      <DependentUpon>202011161800454_add-migration afterplayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011161848203_next2.cs" />
-    <Compile Include="Migrations\202011161848203_next2.Designer.cs">
-      <DependentUpon>202011161848203_next2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011162150298_BeforeUpdateCoachDetail.cs" />
-    <Compile Include="Migrations\202011162150298_BeforeUpdateCoachDetail.Designer.cs">
-      <DependentUpon>202011162150298_BeforeUpdateCoachDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171415546_BeforeCoach.cs" />
-    <Compile Include="Migrations\202011171415546_BeforeCoach.Designer.cs">
-      <DependentUpon>202011171415546_BeforeCoach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171459046_BeforeFixPlayerEdit.cs" />
-    <Compile Include="Migrations\202011171459046_BeforeFixPlayerEdit.Designer.cs">
-      <DependentUpon>202011171459046_BeforeFixPlayerEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171508342_BeforeFixCoach.cs" />
-    <Compile Include="Migrations\202011171508342_BeforeFixCoach.Designer.cs">
-      <DependentUpon>202011171508342_BeforeFixCoach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171740518_BeforeTeam.cs" />
-    <Compile Include="Migrations\202011171740518_BeforeTeam.Designer.cs">
-      <DependentUpon>202011171740518_BeforeTeam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171759535_AfterNukeTeam.cs" />
-    <Compile Include="Migrations\202011171759535_AfterNukeTeam.Designer.cs">
-      <DependentUpon>202011171759535_AfterNukeTeam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team.cs" />
@@ -104,38 +63,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011161509385_InitialCreate.resx">
-      <DependentUpon>202011161509385_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011161737557_Add-MIgration InitialMIgration.resx">
-      <DependentUpon>202011161737557_Add-MIgration InitialMIgration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011161800454_add-migration afterplayer.resx">
-      <DependentUpon>202011161800454_add-migration afterplayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011161848203_next2.resx">
-      <DependentUpon>202011161848203_next2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011162150298_BeforeUpdateCoachDetail.resx">
-      <DependentUpon>202011162150298_BeforeUpdateCoachDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171415546_BeforeCoach.resx">
-      <DependentUpon>202011171415546_BeforeCoach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171459046_BeforeFixPlayerEdit.resx">
-      <DependentUpon>202011171459046_BeforeFixPlayerEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171508342_BeforeFixCoach.resx">
-      <DependentUpon>202011171508342_BeforeFixCoach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171740518_BeforeTeam.resx">
-      <DependentUpon>202011171740518_BeforeTeam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171759535_AfterNukeTeam.resx">
-      <DependentUpon>202011171759535_AfterNukeTeam.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

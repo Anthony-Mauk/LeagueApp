@@ -10,21 +10,24 @@ namespace LeagueApp.Data
 {
     public class Team
     {
-        //[Key]
-        //public int TeamId { get; set; }
-        //public Guid OwnerId { get; set; }
-        //[Required]
-        //public string Name { get; set; }
+        [Key]
+        public int TeamId { get; set; }
+        public Guid OwnerId { get; set; }
+        [Required]
+        [Display(Name="Team Name")]
+        public string Name { get; set; }
 
-        ////A team has one coach
-        //[ForeignKey(nameof(Coach))]
-        //public int CoachId { get; set; }
-        //public virtual Coach Coach { get; set; }
-
-        ////a team has many players
-        //[ForeignKey(nameof(Player))]
-        //public int PlayerId { get; set; }
-        //public virtual ICollection<Player> Players { get; set; } //= new hashset<player>();
-
+       
+        //public int? PlayerId { get; set; } 
+        //[ForeignKey(nameof(PlayerId))]
+        //[ForeignKey("PlayerId")]
+        public virtual ICollection<Player> Players { get; set; } = new List<Player>(); // one table holding the many entities
+        
+        
+        //public int? CoachId { get; set; }
+        //[ForeignKey("CoachId")]
+        //[ForeignKey(nameof(CoachId))]
+        //public virtual Coach Coach { get; set; } one to one
+        public virtual ICollection<Coach> Coaches { get; set; } = new List<Coach>(); // one table holding the many entities
     }
 }

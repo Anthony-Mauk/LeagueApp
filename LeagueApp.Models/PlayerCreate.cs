@@ -20,7 +20,7 @@ namespace LeagueApp.Models
         [Required]
         [Display(Name = "Parent Email")]
         public string ParentEmail { get; set; }
-        //public int? TeamId { get; set; }
-        //public int? CoachId { get; set; }
+        public int? TeamId { get; set; }
+        public int? CoachId { get; set; }
     }
 }

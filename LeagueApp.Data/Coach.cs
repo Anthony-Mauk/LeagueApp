@@ -11,7 +11,10 @@ namespace LeagueApp.Data
     public class Coach
     {
         [Key]
-        public int CoachId { get; set; }
+
+       
+        public int CoachId { get; set; } 
+        
         public Guid OwnerId { get; set; }
         [Required]
         [Display(Name ="First Name")]
@@ -21,8 +24,12 @@ namespace LeagueApp.Data
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
-        //[ForeignKey(nameof(Team))]
-        //public int TeamId { get; set; }
+        
+        public int? TeamId { get; set; } //many linked to the one table
+        [ForeignKey(nameof(TeamId))]
+        public virtual Team Team { get; set; }
+
+
 
     }
 }
