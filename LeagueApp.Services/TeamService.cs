@@ -1,7 +1,9 @@
 ﻿using LeagueApp.Data;
 using LeagueApp.Models;
+using Sentry;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,20 +39,57 @@ namespace LeagueApp.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                //List<Player> player = new List<Player>();
+
                 var query =
                     ctx
-                        .Teams.Where(e => e.OwnerId == _userId)
+                        .Teams
+                        .Where(e => e.OwnerId == _userId)
+                        // add next two lines
+                        //.Include(e => e.Coaches) // added this
+                        //.Include(e => e.Players) // added this
                         .Select(
                             e =>
                                 new TeamListItem
                                 {
                                     TeamId = e.TeamId,
-                                    Name = e.Name
+                                    Name = e.Name,
+                                    Coaches = e.Coaches,
+                                    Players = e.Players,
+                                    //PlayerCount = player.Count,
+                                    PlayerCount = e.Players.Count, 
+                                    CoachCount = e.CoachCount
                                 }
                         );
+
+                //var query = from team in ctx.Teams
+                //            where team.OwnerId == _userId
+                //            join coach in ctx.Coaches on team.TeamId equals coach.TeamId
+                //            join player in ctx.Players on team.TeamId equals player.TeamId
+                //            select new TeamListItem
+                //            {
+                //                TeamId = team.TeamId,
+                //                Name = team.Name,
+                //                Coaches = team.Coaches,
+                //                Players = team.Players,
+                //                PlayerCount = team.Players.Count(),
+                //                CoachCount = team.Coaches.Count
+                //            };
+
                 return query.ToArray();
             }
         }
+
+        //private int GetPlayerCount(ICollection<Player> players)
+        //{
+        //    int count = 0;
+
+        //    foreach (Player player in players)
+        //    {
+        //        count++;
+        //    }
+        //    return count;
+        //}
         public TeamDetail GetTeamById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -90,10 +129,20 @@ namespace LeagueApp.Services
                         .Teams
                         .Single(e => e.TeamId == teamId && e.OwnerId == _userId);
 
-                ctx.Teams.Remove(entity);
+                if (entity.Coaches != null || entity.Players != null)
+                {
 
-                return ctx.SaveChanges() == 1;
+                    return false;
+                }
+                else
+                {
+                    ctx.Teams.Remove(entity);
+
+                    return ctx.SaveChanges() == 1;
+                }
+
             }
+
         }
     }
 }

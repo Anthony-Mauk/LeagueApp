@@ -20,3 +20,12 @@ C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\LeagueApp.Data.pdb
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\LeagueApp.Data.dll.config
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\LeagueApp.Models.pdb
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\LeagueApp.Models.dll.config
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Newtonsoft.Json.dll
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.dll
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.PlatformAbstractions.dll
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.Protocol.dll
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Newtonsoft.Json.xml
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.pdb
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.xml
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.Protocol.pdb
+C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Services\bin\Debug\Sentry.Protocol.xml

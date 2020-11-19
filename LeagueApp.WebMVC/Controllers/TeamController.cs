@@ -107,12 +107,19 @@ namespace LeagueApp.WebMVC.Controllers
         public ActionResult DeletePost(int id)
         {
             var service = CreateTeamService();
+            if (service.DeleteTeam(id))
+            {
+                TempData["SaveResult"] = "Your team was deleted";
 
-            service.DeleteTeam(id);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["SaveResult"] = "Your team contains players or coaches, re-assign them before delete";
+                return RedirectToAction("Index");
+            }
 
-            TempData["SaveResult"] = "Your team was deleted";
-
-            return RedirectToAction("Index");
+            
         }
         private TeamService CreateTeamService()
         {
