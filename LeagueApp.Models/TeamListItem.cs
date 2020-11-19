@@ -13,7 +13,7 @@ namespace LeagueApp.Models
         public int TeamId { get; set; }
         public string Name { get; set; }
         public int CoachId { get; set; }
-        public virtual ICollection<Coach> Coaches { get; set; } = new HashSet<Coach>();
+        public virtual ICollection<Coach> Coaches { get; set; } = new HashSet<Coach>(); //took off Hashset from data and model
         public int PlayerId { get; set; }
         public virtual ICollection<Player> Players { get; set; } = new HashSet<Player>();
         [Display(Name ="# of Coaches")]

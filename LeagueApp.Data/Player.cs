@@ -21,9 +21,9 @@ namespace LeagueApp.Data
         [Required]
         public string ParentEmail { get; set; }
        
-    //    //[ForeignKey("Team")]
-        public int? TeamId { get; set; } // many players linked to the one table
-        [ForeignKey(nameof(TeamId))]
+        [ForeignKey(nameof(Team))]
+        public int TeamId { get; set; } // many players linked to the one table // took out ? nullable
+        //[ForeignKey(nameof(TeamId))]
         public virtual Team Team { get; set; }
     //
     }

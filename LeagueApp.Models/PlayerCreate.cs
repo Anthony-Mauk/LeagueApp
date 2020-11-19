@@ -17,9 +17,9 @@ namespace LeagueApp.Models
         public string LastName { get; set; }
         [Required]
         public string ParentEmail { get; set; }
-
-        public int? TeamId { get; set; } // many players linked to the one table
-        [ForeignKey(nameof(TeamId))]
+        
+        public int TeamId { get; set; } // many players linked to the one table
+        //[ForeignKey(nameof(TeamId))]
         public virtual Team Team { get; set; }
     }
 }

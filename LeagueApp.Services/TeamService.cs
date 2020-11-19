@@ -44,6 +44,8 @@ namespace LeagueApp.Services
                 var query =
                     ctx
                         .Teams
+                        .Include(nameof(Coach))
+                        .Include(nameof(Player))
                         .Where(e => e.OwnerId == _userId)
                         // add next two lines
                         //.Include(e => e.Coaches) // added this
@@ -58,7 +60,7 @@ namespace LeagueApp.Services
                                     Players = e.Players,
                                     //PlayerCount = player.Count,
                                     PlayerCount = e.Players.Count, 
-                                    CoachCount = e.CoachCount
+                                    CoachCount = e.Coaches.Count
                                 }
                         );
 
@@ -129,7 +131,7 @@ namespace LeagueApp.Services
                         .Teams
                         .Single(e => e.TeamId == teamId && e.OwnerId == _userId);
 
-                if (entity.Coaches != null || entity.Players != null)
+                if (entity.Coaches.Count > 0 || entity.Players.Count > 0)
                 {
 
                     return false;

@@ -22,9 +22,9 @@ namespace LeagueApp.Data
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
-        
-        public int? TeamId { get; set; } //many linked to the one table
-        [ForeignKey(nameof(TeamId))]
+        [ForeignKey(nameof(Team))]  // added this line and commented 27
+        public int TeamId { get; set; } //many linked to the one table
+        //[ForeignKey(nameof(TeamId))]
         public virtual Team Team { get; set; }
 
 

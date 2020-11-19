@@ -50,7 +50,8 @@ namespace LeagueApp.Services
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
                                     Email = e.Email,
-                                    TeamId = e.TeamId
+                                    TeamId = e.TeamId,
+                                    Team = e.Team
                                 }
                         );
 

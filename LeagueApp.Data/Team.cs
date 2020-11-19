@@ -31,24 +31,24 @@ namespace LeagueApp.Data
         //[SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Coach> Coaches { get; set; } = new List<Coach>(); // one table holding the many entities
 
-        public int CoachCount
-        {
-            get
-            {
+        //public int CoachCount
+        //{
+        //    get
+        //    {
 
-                return Coaches.Count;
-            }
-            set { }
-        }
+        //        return Coaches.Count;
+        //    }
+        //    set { }
+        //}
         
-        public int PlayerCount
-        {
-            get
-            {
-                return Players.Count();
-            }
-            set { }
+        //public int PlayerCount
+        //{
+        //    get
+        //    {
+        //        return Players.Count();
+        //    }
+        //    set { }
 
-        }
+        //}
     }
 }

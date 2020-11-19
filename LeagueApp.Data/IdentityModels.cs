@@ -49,15 +49,30 @@ namespace LeagueApp.Data
 
             // add code so you can delete a team or coach, but need front end to say cannot delete with ..
             modelBuilder.Entity<Player>()
-                .HasOptional<Team>(s => s.Team)
+                //.HasOptional<Team>(s => s.Team)
+                .HasRequired<Team>(s => s.Team)
                 .WithMany()
                 .WillCascadeOnDelete(false);
-
+            //Change to required for a team to have a coach
             modelBuilder.Entity<Coach>()
-                .HasOptional<Team>(s => s.Team)
+                .HasRequired<Team>(s => s.Team)
+                //.HasOptionnal<Team>(s => s.Team)
                 .WithMany()
                 .WillCascadeOnDelete(false);
             // end
+
+            //add code for team
+            modelBuilder.Entity<Team>()
+                .HasMany<Coach>(t => t.Coaches)
+                //.WithOptional(e=> e.Team)
+                .WithRequired(e => e.Team)
+                .HasForeignKey<int>(s => s.TeamId);
+
+            modelBuilder.Entity<Team>()
+                .HasMany<Player>(t => t.Players)
+                //.WithOptional(e=> e.Team)
+                .WithRequired(e => e.Team)
+                .HasForeignKey<int>(s => s.TeamId);
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

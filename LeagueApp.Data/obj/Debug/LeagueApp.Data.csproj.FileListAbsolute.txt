@@ -14,13 +14,3 @@ C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\bin\Debug\Microsoft.AspNet.Ident
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.dll
 C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.pdb
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.InitialCreate.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.csproj.GenerateResource.cache
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.AfterAllCRUDNeedFixes.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.addmigration1118201330.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations._1118201413.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations._1118201437.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeCounts.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeCountFix.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations.BeforeCountFix2.resources
-C:\ElevenFiftyProjects\LeagueApp\LeagueApp.Data\obj\Debug\LeagueApp.Data.Migrations._1118201634.resources
