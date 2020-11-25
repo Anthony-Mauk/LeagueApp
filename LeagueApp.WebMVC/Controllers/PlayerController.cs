@@ -126,7 +126,7 @@ namespace LeagueApp.WebMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        private PlayerService CreatePlayerService()
+        private IPlayerService CreatePlayerService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new PlayerService(userId);

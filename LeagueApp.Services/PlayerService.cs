@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LeagueApp.Services
 {
-    public class PlayerService
+    public class PlayerService : IPlayerService
     {
         private readonly Guid _userId;
 

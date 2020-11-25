@@ -11,6 +11,7 @@ namespace LeagueApp.Models
 {
     public class PlayerDetail
     {
+        [Display(Name = "Player Id")]
         public int PlayerId { get; set; }
         [Display(Name ="First Name")]
         public string FirstName { get; set; }

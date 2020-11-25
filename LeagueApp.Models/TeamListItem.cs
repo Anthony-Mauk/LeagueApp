@@ -10,8 +10,10 @@ namespace LeagueApp.Models
 {
     public class TeamListItem
     {
+        [Display(Name = "Team Id")]
         public int TeamId { get; set; }
         public string Name { get; set; }
+        [Display(Name = "Coach Id")]
         public int CoachId { get; set; }
         public virtual ICollection<Coach> Coaches { get; set; } = new HashSet<Coach>(); //took off Hashset from data and model
         public int PlayerId { get; set; }

@@ -12,11 +12,14 @@ namespace LeagueApp.Models
     public class CoachCreate
     {
         [Required]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
         [Required]
         public string Email { get; set; }
+        [Display(Name = "Team Id")]
         public int TeamId { get; set; } // many players linked to the one table - remove ? nullable
        // [ForeignKey(nameof(TeamId))]
         public virtual Team Team { get; set; }

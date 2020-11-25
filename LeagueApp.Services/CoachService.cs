@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LeagueApp.Services
 {
-    public class CoachService
+    public class CoachService : ICoachService
     {
         private readonly Guid _userId;
         public CoachService(Guid userId)

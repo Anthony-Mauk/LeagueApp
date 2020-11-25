@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "storage1": {
+      "type": "storage",
+      "suggestion": "true",
+      "ignored": "true"
+    },
+    "secrets1": {
+      "type": "secrets",
+      "suggestion": "true",
+      "ignored": "true"
+    },
     "mssql1": {
       "type": "mssql",
       "connectionId": "DefaultConnection"

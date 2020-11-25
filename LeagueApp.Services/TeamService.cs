@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LeagueApp.Services
 {
-    public class TeamService
+    public class TeamService : ITeamService
     {
         private readonly Guid _userId;
 
@@ -59,7 +59,7 @@ namespace LeagueApp.Services
                                     Coaches = e.Coaches,
                                     Players = e.Players,
                                     //PlayerCount = player.Count,
-                                    PlayerCount = e.Players.Count, 
+                                    PlayerCount = e.Players.Count,
                                     CoachCount = e.Coaches.Count
                                 }
                         );

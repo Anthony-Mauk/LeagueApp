@@ -11,6 +11,7 @@ namespace LeagueApp.Models
 {
     public class CoachListItem
     {
+        [Display(Name = "Coach Id")]
         public int CoachId { get; set; }
         [Display(Name ="First Name")]
         public string FirstName { get; set; }
@@ -19,6 +20,7 @@ namespace LeagueApp.Models
         public string Email { get; set; }
         //public int TeamId { get; set; }
         //public virtual Team Teams { get; set; }
+        [Display(Name = "Team Id")]
         public int TeamId { get; set; } // many players linked to the one table
         //[ForeignKey(nameof(TeamId))]
         public virtual Team Team { get; set; }

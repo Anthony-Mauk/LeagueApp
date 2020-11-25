@@ -23,7 +23,7 @@ namespace LeagueApp.WebMVC.Controllers
             return View(model);
         }
 
-        private CoachService CreateCoachService()
+        private ICoachService CreateCoachService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new CoachService(userId);

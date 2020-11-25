@@ -73,6 +73,11 @@ namespace LeagueApp.Data
                 //.WithOptional(e=> e.Team)
                 .WithRequired(e => e.Team)
                 .HasForeignKey<int>(s => s.TeamId);
+
+            //modelBuilder.Entity<Team>().HasData(
+                
+                
+            //    )
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

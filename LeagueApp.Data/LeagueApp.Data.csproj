@@ -56,6 +56,15 @@
   <ItemGroup>
     <Compile Include="Coach.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011231720323_1123201220.cs" />
+    <Compile Include="Migrations\202011231720323_1123201220.Designer.cs">
+      <DependentUpon>202011231720323_1123201220.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011231723097_11232012333.cs" />
+    <Compile Include="Migrations\202011231723097_11232012333.Designer.cs">
+      <DependentUpon>202011231723097_11232012333.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team.cs" />
@@ -63,6 +72,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011231720323_1123201220.resx">
+      <DependentUpon>202011231720323_1123201220.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011231723097_11232012333.resx">
+      <DependentUpon>202011231723097_11232012333.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

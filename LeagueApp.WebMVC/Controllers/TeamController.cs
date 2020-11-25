@@ -121,7 +121,7 @@ namespace LeagueApp.WebMVC.Controllers
 
             
         }
-        private TeamService CreateTeamService()
+        private ITeamService CreateTeamService() //ITeamService return Interface vs. the Service Layer
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new TeamService(userId);
