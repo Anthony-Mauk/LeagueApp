@@ -28,6 +28,7 @@ namespace LeagueApp.WebMVC.Controllers
         {
             //viewbag.teamid = ?? General Store
             ViewBag.TeamId = new SelectList(_db.Teams.ToList(), "TeamId", "Name");
+
             return View();
         }
 
@@ -36,6 +37,8 @@ namespace LeagueApp.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PlayerCreate model)
         {
+            //if (model.Team.)
+
             if (!ModelState.IsValid)
             {
                 return View(model);

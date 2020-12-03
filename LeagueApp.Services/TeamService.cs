@@ -99,15 +99,20 @@ namespace LeagueApp.Services
                 var entity =
                     ctx
                         .Teams
+                        .Include(e => e.Players)
+                        .Include(e => e.Coaches)
                         .Single(e => e.TeamId == id && e.OwnerId == _userId);
                 return
                     new TeamDetail
                     {
                         TeamId = entity.TeamId,
-                        Name = entity.Name
+                        Name = entity.Name,
+                        Players = entity.Players,
+                        Coaches = entity.Coaches
                     };
             }
         }
+
 
         public bool UpdateTeam(TeamEdit model)
         {

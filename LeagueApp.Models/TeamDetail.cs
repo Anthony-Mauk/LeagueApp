@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeagueApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace LeagueApp.Models
     {
         public int TeamId { get; set; }
         public string Name { get; set; }
+
+        public ICollection<Player> Players { get; set; } = new List<Player>();
+        public ICollection<Coach> Coaches { get; set; } = new List<Coach>();
 
     }
 }
