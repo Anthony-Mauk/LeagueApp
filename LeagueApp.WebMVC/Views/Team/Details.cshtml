@@ -27,8 +27,83 @@
         </dd>
 
     </dl>
+    <hr />
+    @if (Model.Players.Count > 0)
+    {
+        <h3>Players</h3>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    Parent Email
+                </td>
+            </tr>
+            @foreach (var player in Model.Players)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(playerFName => player.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(playerLName => player.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(parentEmail => player.ParentEmail)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+    @if (Model.Coaches.Count > 0)
+    {
+        <hr />
+        <h3>Coaches</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>
+                        First Name
+                    </td>
+                    <td>
+                        Last Name
+                    </td>
+                    <td>
+                        Email
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var coach in Model.Coaches)
+                {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(coachFName => coach.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(coachLName => coach.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(coachEmail => coach.Email)
+                        </td>
+                    </tr>
+
+                }
+
+
+            </tbody>
+
+        </table>
+    }
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TeamId}) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TeamId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
