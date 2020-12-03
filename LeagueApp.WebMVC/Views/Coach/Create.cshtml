@@ -12,7 +12,8 @@
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
-    <h4>CoachCreate</h4>
+    <h4>Create a Coach</h4>
+    <h5>You must create a team before creating a coach or player</h5>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">

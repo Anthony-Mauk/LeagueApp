@@ -10,5 +10,6 @@ namespace LeagueApp.Services
         TeamDetail GetTeamById(int id);
         IEnumerable<TeamListItem> GetTeams();
         bool UpdateTeam(TeamEdit model);
+        //IEnumerable<TeamListItem> PlayersOnTeam(int id);
     }
 }

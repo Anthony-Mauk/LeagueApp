@@ -32,8 +32,14 @@ namespace LeagueApp.Data.Migrations
 
             context.Teams.AddOrUpdate(
                 p => p.Name,
-                new Team() { OwnerId = Guid.Parse(context.Users.Single(e=>e.UserName == "seeduser@mail.com").Id),
-                Name = "Beasts", TeamId =1 },
+                //new Team() { OwnerId = Guid.Parse("5555a3d5-3dda-40ac-9a43-f1d969d47ddb"),
+                //Name = "Beasts", TeamId =1 },
+                new Team()
+                {
+                    OwnerId = Guid.Parse(context.Users.Single(e => e.UserName == "seeduser@mail.com").Id),
+                    Name = "Beasts",
+                    TeamId = 1
+                },
                 new Team() { OwnerId = Guid.Parse(context.Users.Single(e=>e.UserName == "seeduser@mail.com").Id),
                 Name = "Cavaliers", TeamId =2 },
                 new Team()

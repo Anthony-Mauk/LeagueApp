@@ -25,6 +25,16 @@ namespace LeagueApp.WebMVC.Controllers
             return View(model);
         }
 
+        // GET: Team
+        public ActionResult Roster()
+        {
+
+            var service = CreateTeamService();
+            var model = service.GetTeams();
+
+            return View(model);
+        }
+
         public ActionResult Create()
         {
             return View();
@@ -55,6 +65,14 @@ namespace LeagueApp.WebMVC.Controllers
 
             return View(model);
         }
+
+        //public ActionResult TeamDetails(int id)
+        //{
+        //    var svc = CreateTeamService();
+        //    var model = svc.PlayersOnTeam(id);
+
+        //    return View(model);
+        //}
 
         public ActionResult Edit(int id)
         {
